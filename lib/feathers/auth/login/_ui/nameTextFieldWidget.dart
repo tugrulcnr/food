@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:food/data/colors.dart';
 import 'package:food/localisation/en/strings.dart';
 
-class EmailTextFieldWidget extends StatelessWidget {
-  const EmailTextFieldWidget({super.key});
+class NameTextFieldWidget extends StatelessWidget {
+  const NameTextFieldWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class EmailTextFieldWidget extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(bottom: 10.0),
           child: Text(
-            StringName().emailTextfieldText,
+            StringName().nameTextFieldHeadTet,
             style: const TextStyle(fontWeight: FontWeight.w500),
           ),
         ),
@@ -32,7 +32,7 @@ class EmailTextFieldWidget extends StatelessWidget {
                 ),
               ),
               filled: true,
-              hintText: StringName().emailTextfieldHintText,
+              hintText: StringName().nameTextfieldHintText,
               hintStyle: const TextStyle(
                 color: Colors.black45,
               )),

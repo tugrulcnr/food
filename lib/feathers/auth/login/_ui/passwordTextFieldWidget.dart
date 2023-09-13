@@ -3,7 +3,8 @@ import 'package:food/data/colors.dart';
 import 'package:food/localisation/en/strings.dart';
 
 class PasswordTextFieldWidget extends StatelessWidget {
-  const PasswordTextFieldWidget({super.key});
+   PasswordTextFieldWidget({super.key, this.textFieldHeadText="PASSWORD"});
+  String textFieldHeadText;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class PasswordTextFieldWidget extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(bottom: 10.0),
           child: Text(
-            StringName().passwordTextfieldText,
+            textFieldHeadText,
             style: const TextStyle(fontWeight: FontWeight.w500),
           ),
         ),
@@ -24,7 +25,7 @@ class PasswordTextFieldWidget extends StatelessWidget {
             height: 2.0,
           ),
           decoration: InputDecoration(
-            fillColor: WidgetsColor().textfieldBackground,
+            fillColor: ColorWidgets().textfieldBackground,
             border: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(15.0)),
               borderSide: BorderSide(

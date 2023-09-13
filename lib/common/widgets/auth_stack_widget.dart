@@ -64,7 +64,7 @@ class AuthStackWidget extends StatelessWidget {
             height: _deviceHeight,
             width: _deviceWidth,
             child: Card(
-              color: WidgetsColor().authCardBackground,
+              color: ColorWidgets().authCardBackground,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
                   topLeft: PageRadius().cardRoundedRectangleBorder,
