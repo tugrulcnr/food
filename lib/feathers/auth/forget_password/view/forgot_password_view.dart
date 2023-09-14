@@ -6,6 +6,9 @@ import 'package:food/localisation/en/strings.dart';
 
 class ForgotPasswordView extends StatelessWidget {
   const ForgotPasswordView({super.key});
+  
+    static const routeName = "/forgotPassword-view";
+
 
   @override
   Widget build(BuildContext context) {

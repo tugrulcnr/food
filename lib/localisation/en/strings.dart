@@ -1,5 +1,9 @@
 
 class StringName {
+
+  String seeAll = 'See All >';
+
+
   //login-screen
 
   String loginheadText = 'Log In';
@@ -37,6 +41,18 @@ class StringName {
   String forgotPasswordheadText = 'Forgot Password';
   String forgotPasswordSubText = 'Please sign in to your existing occount';
   String forgotPasswordButtonText = 'SEND CODE';
+
+
+  //SearchTextFieldWidget
+  String searchTextfieldHintText = 'Search dishes, restaurants';
+
+
+  //HOME-VİEW
+  String homeAllCategories = 'All Categories';
+  String openRestaurants = 'Open Restaurants';
+
+
+
 
 
 

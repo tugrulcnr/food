@@ -3,13 +3,19 @@ import 'package:food/common/widgets/auth_stack_widget.dart';
 import 'package:food/data/colors.dart';
 import 'package:food/data/image_path.dart';
 import 'package:food/data/textFont.dart';
+import 'package:food/feathers/auth/forget_password/view/forgot_password_view.dart';
 import 'package:food/feathers/auth/login/_ui/emailTextFieldWidget.dart';
 import 'package:food/feathers/auth/login/_ui/passwordTextFieldWidget.dart';
 import 'package:food/feathers/auth/login/_ui/cardButton.dart';
+import 'package:food/feathers/auth/login/view_model/login_view_model.dart';
+import 'package:food/feathers/auth/sipnUp/view/sign_up_view.dart';
 import 'package:food/localisation/en/strings.dart';
+import 'package:provider/provider.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
+
+  static const routeName = "/login-view";
 
   @override
   State<LoginView> createState() => _LoginViewState();
@@ -19,19 +25,29 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: AuthStackWidget(
-        headText: StringName().loginheadText,
-        subText: StringName().loginsubText,
-        childWidget: const CardChildWidget(),
+      body: Consumer<LoginViewModel>(
+        builder: (context, value, child) {
+          return AuthStackWidget(
+            headText: StringName().loginheadText,
+            subText: StringName().loginsubText,
+            childWidget:  CardChildWidget(checkboxValue: value.isClicked, onChanged: (bool) {value.changeClickOperation();},),
+          );
+        },
       ),
     );
   }
 }
 
 class CardChildWidget extends StatelessWidget {
-  const CardChildWidget({
+  CardChildWidget({
     super.key,
+    required this.checkboxValue,
+    required this.onChanged,
   });
+  bool checkboxValue;
+  Function(bool?) onChanged;
+  
+  
 
   @override
   Widget build(BuildContext context) {
@@ -41,12 +57,13 @@ class CardChildWidget extends StatelessWidget {
         children: [
           const EmailTextFieldWidget(),
           const SizedBox(height: 35),
-           PasswordTextFieldWidget(),
+          PasswordTextFieldWidget(),
           Row(
+            mainAxisSize : MainAxisSize.min,
             children: [
               Checkbox(
-                value: false,
-                onChanged: (value) {},
+                value: checkboxValue,
+                onChanged: onChanged,
               ),
               Text(
                 StringName().rememberMeText,
@@ -54,24 +71,34 @@ class CardChildWidget extends StatelessWidget {
               ),
               const Spacer(),
               InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, ForgotPasswordView.routeName);
+                  },
                   child: Text(
-                StringName().forgotPasswordText,
-                style: TextStyle(color: ColorWidgets().buttonBackground),
-              ))
+                    StringName().forgotPasswordText,
+                    style: TextStyle(color: ColorWidgets().buttonBackground),
+                  ))
             ],
           ),
           const SizedBox(height: 15),
-          CardButton(buttonText: StringName().loginheadText,),
+          CardButton(
+            buttonText: StringName().loginheadText,
+          ),
           const SizedBox(height: 35),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(StringName().dontHaveAccount),
-              Text(
-                StringName().singUp,
-                style: TextStyle(
-                    color: ColorWidgets().buttonBackground,
-                    fontWeight: FontWeight.bold),
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, SignUpView.routeName);
+                },
+                child: Text(
+                  StringName().singUp,
+                  style: TextStyle(
+                      color: ColorWidgets().buttonBackground,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
             ],
           ),
@@ -85,12 +112,9 @@ class CardChildWidget extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Image.asset(
-                    ImagesPath.faceIcon),
-                Image.asset(
-                    ImagesPath.twiterIcon),
-                Image.asset(
-                    ImagesPath.appleIcon),
+                Image.asset(ImagesPath.faceIcon),
+                Image.asset(ImagesPath.twiterIcon),
+                Image.asset(ImagesPath.appleIcon),
               ],
             ),
           ),
@@ -100,5 +124,3 @@ class CardChildWidget extends StatelessWidget {
     );
   }
 }
-
-
