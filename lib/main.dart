@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food/feathers/auth/forget_password/view_model/forgot_password_view_model.dart';
 import 'package:food/feathers/auth/login/_ui/pasword_view_model.dart/passwordWidget_view_model.dart';
-import 'package:food/feathers/auth/login/view/login_view.dart';
 import 'package:food/feathers/auth/login/view_model/login_view_model.dart';
 import 'package:food/feathers/auth/sipnUp/view_model/sign_up_view_mode.dart';
 import 'package:food/feathers/home/_ui/sub_pages/all_catagories/viev_model/all_catagories_view_model.dart';

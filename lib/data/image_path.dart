@@ -17,6 +17,12 @@ static String place2Icon = "assets/images/place2.png";
 static String place3Icon = "assets/images/place3.png";
 
 
+//OPEN- RESTAURANT
+static String starIcon = "assets/images/star.png";
+static String busIcon = "assets/images/bus.png";
+static String timeIcon = "assets/images/time.png";
+
+
 
 
   
