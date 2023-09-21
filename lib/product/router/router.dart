@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food/feathers/auth/forget_password/view/forgot_password_view.dart';
-import 'package:food/feathers/auth/login/view/login_view.dart';
-import 'package:food/feathers/auth/sipnUp/view/sign_up_view.dart';
+import '../../feathers/auth/forget_password/view/forgot_password_view.dart';
+import '../../feathers/auth/login/view/login_view.dart';
+import '../../feathers/auth/sipnUp/view/sign_up_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {

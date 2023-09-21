@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:food/common/widgets/auth_stack_widget.dart';
-import 'package:food/data/colors.dart';
-import 'package:food/data/image_path.dart';
-import 'package:food/data/textFont.dart';
-import 'package:food/feathers/auth/forget_password/view/forgot_password_view.dart';
-import 'package:food/feathers/auth/login/_ui/emailTextFieldWidget.dart';
-import 'package:food/feathers/auth/login/_ui/passwordTextFieldWidget.dart';
-import 'package:food/feathers/auth/login/_ui/cardButton.dart';
-import 'package:food/feathers/auth/login/view_model/login_view_model.dart';
-import 'package:food/feathers/auth/sipnUp/view/sign_up_view.dart';
-import 'package:food/localisation/en/strings.dart';
+import '../../../../common/widgets/auth_stack_widget.dart';
+import '../../../../data/colors.dart';
+import '../../../../data/image_path.dart';
+import '../../../../data/textFont.dart';
+import '../../forget_password/view/forgot_password_view.dart';
+import '../_ui/emailTextFieldWidget.dart';
+import '../_ui/passwordTextFieldWidget.dart';
+import '../_ui/cardButton.dart';
+import '../view_model/login_view_model.dart';
+import '../../sipnUp/view/sign_up_view.dart';
+import '../../../../localisation/en/strings.dart';
 import 'package:provider/provider.dart';
 
 class LoginView extends StatefulWidget {

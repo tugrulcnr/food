@@ -1,15 +1,15 @@
-class OpenRestaurantsModel {
-  List<Businesses>? businesses;
+class HomeModel {
+  List<Business>? businesses;
   int? total;
   Region? region;
 
-  OpenRestaurantsModel({this.businesses, this.total, this.region});
+  HomeModel({this.businesses, this.total, this.region});
 
-  OpenRestaurantsModel.fromJson(Map<String, dynamic> json) {
+  HomeModel.fromJson(Map<String, dynamic> json) {
     if (json['businesses'] != null) {
-      businesses = <Businesses>[];
+      businesses = <Business>[];
       json['businesses'].forEach((v) {
-        businesses!.add(Businesses.fromJson(v));
+        businesses!.add(Business.fromJson(v));
       });
     }
     total = json['total'];
@@ -19,7 +19,7 @@ class OpenRestaurantsModel {
 
 }
 
-class Businesses {
+class Business {
   String? id;
   String? alias;
   String? name;
@@ -36,7 +36,7 @@ class Businesses {
   String? displayPhone;
   double? distance;
 
-  Businesses(
+  Business(
       {this.id,
       this.alias,
       this.name,
@@ -53,7 +53,7 @@ class Businesses {
       this.displayPhone,
       this.distance});
 
-  Businesses.fromJson(Map<String, dynamic> json) {
+  Business.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     alias = json['alias'];
     name = json['name'];
@@ -158,3 +158,5 @@ class Region {
   }
 
 }
+
+

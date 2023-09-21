@@ -1,16 +1,16 @@
 import 'package:dio/dio.dart';
-import 'package:food/feathers/home/_ui/sub_pages/open_restaurants/model/open_restaurants_model.dart';
-import 'package:food/product/network/network_manager.dart';
+import '../model/home_model.dart';
+import '../../../product/network/network_manager.dart';
 
-class OpenRestaurantsService {
+class HomeViewService {
   final Dio _networkManager = ProjectNetworkManager.instance.service;
 
-  Future<OpenRestaurantsModel?> fetchData() async {
+  Future<HomeModel?> fetchData() async {
     final response = await _networkManager.get("search?location=ANKARA");
     if (response.statusCode == 200) {
       final data = response.data;
       if (data is Map<String, dynamic>) {
-        return OpenRestaurantsModel.fromJson(data);
+        return HomeModel.fromJson(data);
       }
     }else{
       print("------- Service KATMANINDA HATA VAR -----"*10);

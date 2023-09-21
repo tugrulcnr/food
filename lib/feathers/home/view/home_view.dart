@@ -1,44 +1,27 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:food/data/colors.dart';
-import 'package:food/data/image_path.dart';
-import 'package:food/feathers/home/_ui/searchTextField.dart';
-import 'package:food/feathers/home/_ui/sub_pages/all_catagories/view/all_catagories_view.dart';
-import 'package:food/feathers/home/_ui/sub_pages/open_restaurants/view/open_restaurants_view.dart';
-import 'package:food/localisation/en/strings.dart';
-import 'package:food/product/network/network_manager.dart';
+import '../../../data/colors.dart';
+import '../../../data/image_path.dart';
+import '../view_model/home_view_model.dart';
+import '../widget/searchTextField.dart';
+import '../widget/sub_pages/all_catagories/view/all_catagories_view.dart';
+import '../../../localisation/en/strings.dart';
 import 'package:provider/provider.dart';
 
+import '../widget/RestaurantList.dart';
+
 class HomeView extends StatefulWidget {
-  const HomeView({super.key});
+   const HomeView({super.key});
+
 
   @override
   State<HomeView> createState() => _HomeViewState();
 }
 
 class _HomeViewState extends State<HomeView> {
-  /*
-    final Dio _networkManager = ProjectNetworkManager.instance.service;
 
   @override
-  void initState() {
-    super.initState();
-  nagetDatame();
-    
-  }
-  Future<void> nagetDatame() async {
-    final response = await _networkManager.get("search?location=ANKARA");
-    if(response.statusCode == 200){
-      print(response.data);
-    }else{
-      print("sorun oldu ---"*10);
-    }
-  }
-  */
-  
-  @override
   Widget build(BuildContext context) {
-    return Consumer(
+    return Consumer<HomeViewModel>(
       builder: (context, value, child) {
         return Scaffold(
           backgroundColor: ColorWidgets().authCardBackground,
@@ -56,7 +39,7 @@ class _HomeViewState extends State<HomeView> {
                   const SizedBox(height: 24),
                   const AllCategories(),
                   openRestaurantsRowWidget(),
-                  OpenRestaurants(),
+                   OpenRestaurants(),
                 ],
               ),
             ),
@@ -185,3 +168,6 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 }
+
+
+

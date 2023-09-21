@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:food/common/widgets/auth_stack_widget.dart';
-import 'package:food/feathers/auth/login/_ui/cardButton.dart';
-import 'package:food/feathers/auth/login/_ui/emailTextFieldWidget.dart';
-import 'package:food/localisation/en/strings.dart';
+import '../../../../common/widgets/auth_stack_widget.dart';
+import '../../login/_ui/cardButton.dart';
+import '../../login/_ui/emailTextFieldWidget.dart';
+import '../../../../localisation/en/strings.dart';
 
 class ForgotPasswordView extends StatelessWidget {
   const ForgotPasswordView({super.key});

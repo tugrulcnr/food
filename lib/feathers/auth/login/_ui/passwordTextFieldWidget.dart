@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food/data/colors.dart';
-import 'package:food/localisation/en/strings.dart';
+import '../../../../data/colors.dart';
+import '../../../../localisation/en/strings.dart';
 import 'package:provider/provider.dart';
 
 import 'pasword_view_model.dart/passwordWidget_view_model.dart';

@@ -19,7 +19,7 @@ class DioInterceptor extends Interceptor {
   @override
   Future onRequest(
       RequestOptions options, RequestInterceptorHandler handler) async {
-    const token = "Wasua2otzv8xHveher4Yl81wOJy9TRZ5-lwz4yUfmB5M-oPM_s5NqwH5PVEhpnllQB7oZR4uvas6MIBiWQai8m7V_OuayGT5sHg474hKcJCVj5JMCVnkaevNBRUIZXYx";
+    const token = "qChnfwIfD_2hr-iZ7oJbZwiZ4rF501IoisE5nAYGADUyBrBHaalN4e3XF1k0Dnl8oseKWozIXCrtrcw6Q2WRgqM5wJIVBfkuur54dEjH0lAzN2HvwlxpUOu3ddMKZXYx";
     if (token.isNotEmpty) {
       options.headers['Authorization'] = "Bearer $token";
     }

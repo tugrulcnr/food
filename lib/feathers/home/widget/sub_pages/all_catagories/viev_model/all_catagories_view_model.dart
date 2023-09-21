@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food/data/image_path.dart';
+import '../../../../../../data/image_path.dart';
 
 class AllCategoriesViewModel with ChangeNotifier {
   

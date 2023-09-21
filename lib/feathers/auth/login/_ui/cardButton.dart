@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food/data/colors.dart';
-import 'package:food/data/textFont.dart';
-import 'package:food/localisation/en/strings.dart';
+import '../../../../data/colors.dart';
+import '../../../../data/textFont.dart';
+import '../../../../localisation/en/strings.dart';
 
 class CardButton extends StatelessWidget {
    CardButton({

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food/data/colors.dart';
-import 'package:food/data/image_path.dart';
+import '../../data/colors.dart';
+import '../../data/image_path.dart';
 
 class AuthStackWidget extends StatelessWidget {
   AuthStackWidget({super.key, required this.headText, required this.subText,required this.childWidget});

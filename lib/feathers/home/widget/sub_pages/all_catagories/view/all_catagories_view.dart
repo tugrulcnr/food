@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:food/data/colors.dart';
-import 'package:food/data/image_path.dart';
-import 'package:food/feathers/home/_ui/sub_pages/all_catagories/viev_model/all_catagories_view_model.dart';
 import 'package:provider/provider.dart';
+
+import '../../../../../../data/colors.dart';
+import '../viev_model/all_catagories_view_model.dart';
 
 class AllCategories extends StatelessWidget {
   const AllCategories({super.key});

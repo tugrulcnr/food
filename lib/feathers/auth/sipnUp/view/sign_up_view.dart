@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:food/common/widgets/auth_stack_widget.dart';
-import 'package:food/feathers/auth/login/_ui/emailTextFieldWidget.dart';
-import 'package:food/feathers/auth/login/_ui/nameTextFieldWidget.dart';
-import 'package:food/feathers/auth/login/_ui/passwordTextFieldWidget.dart';
-import 'package:food/feathers/auth/login/_ui/cardButton.dart';
-import 'package:food/feathers/auth/sipnUp/view_model/sign_up_view_mode.dart';
-import 'package:food/localisation/en/strings.dart';
+import '../../../../common/widgets/auth_stack_widget.dart';
+import '../../login/_ui/emailTextFieldWidget.dart';
+import '../../login/_ui/nameTextFieldWidget.dart';
+import '../../login/_ui/passwordTextFieldWidget.dart';
+import '../../login/_ui/cardButton.dart';
+import '../view_model/sign_up_view_mode.dart';
+import '../../../../localisation/en/strings.dart';
 import 'package:provider/provider.dart';
 
 class SignUpView extends StatelessWidget {

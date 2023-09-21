@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:food/data/colors.dart';
-import 'package:food/localisation/en/strings.dart';
+import 'package:provider/provider.dart';
+import '../../../data/colors.dart';
+import '../../../localisation/en/strings.dart';
+import '../view_model/home_view_model.dart';
 
 class SearchTextFieldWidget extends StatelessWidget {
   const SearchTextFieldWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Consumer<HomeViewModel>(builder:(context, value, child) {
+      return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TextField(
+          controller: value.searchController,
           showCursor: false,
           style: const TextStyle(
             height: 2.0,
@@ -34,5 +38,6 @@ class SearchTextFieldWidget extends StatelessWidget {
         )
       ],
     );
+    }, );
   }
 }
